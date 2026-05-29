@@ -49,43 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  /* ----- Contact Form Handling (Formspree) ----- */
-  const form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const btn = form.querySelector('.form-submit');
-      const successMsg = document.getElementById('form-success');
-
-      btn.disabled = true;
-      btn.textContent = 'Wird gesendet…';
-
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
-        if (res.ok) {
-          form.reset();
-          if (successMsg) {
-            successMsg.style.display = 'flex';
-            successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          }
-          btn.textContent = 'Gesendet ✓';
-        } else {
-          btn.disabled = false;
-          btn.textContent = 'Jetzt Anfrage senden';
-          alert('Ein Fehler ist aufgetreten. Bitte versuche es erneut oder schreib uns direkt per E-Mail.');
-        }
-      } catch {
-        btn.disabled = false;
-        btn.textContent = 'Jetzt Anfrage senden';
-        alert('Keine Internetverbindung. Bitte versuche es später erneut.');
-      }
-    });
-  }
-
   /* ----- Smooth scroll for anchor links ----- */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
