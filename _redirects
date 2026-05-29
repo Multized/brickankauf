@@ -1,0 +1,3 @@
+# Cloudflare Pages Redirects
+# www → non-www (oder umgekehrt – je nach Konfiguration in Cloudflare)
+# https://brickankauf.de/*  https://www.brickankauf.de/:splat  301
