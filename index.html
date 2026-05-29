@@ -239,11 +239,20 @@
 
     <div class="buy-note reveal" role="note" aria-label="Wichtiger Hinweis">
       <div class="icon" aria-hidden="true">⚠️</div>
-      <p>
-        <strong>Nur echtes LEGO®:</strong> Wir kaufen ausschließlich originale LEGO®-Produkte an.
-        Imitationen (z. B. Cobi, Sluban, Lepin o. ä.) können wir leider nicht berücksichtigen.
-        Im Zweifelsfall einfach fragen – wir helfen dir gerne!
-      </p>
+      <div>
+        <p>
+          <strong>Nur echtes, originales LEGO®:</strong> Wir kaufen ausschließlich Originalware an.
+          Imitationen (z. B. Cobi, Sluban, Lepin o. ä.) können wir leider nicht berücksichtigen.
+        </p>
+        <p style="margin-top:.5rem;">
+          <strong>Kein LEGO® Botanic:</strong> Botanic-Sets (z. B. Blumen, Bonsai, Orchidee) nehmen wir derzeit nicht an,
+          da die spezialisierten Teile für uns schwer weiterverkäuflich sind.
+        </p>
+        <p style="margin-top:.5rem;">
+          <strong>Gewicht ohne Anleitungen:</strong> Der Kilopreis gilt ausschließlich für Steine – bitte lege Bauanleitungen
+          vor dem Einpacken heraus oder wiege sie separat aus.
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -281,10 +290,11 @@
       </div>
     </div>
 
-    <p class="pricing-note reveal">
-      💡 Preise richten sich nach Menge, Qualität und Marktlage. Sende uns deine Anfrage –
-      wir machen dir ein individuelles Angebot. <strong>Keine Verpflichtung!</strong>
-    </p>
+    <div class="pricing-disclaimers reveal">
+      <p>💡 Preise richten sich nach Menge, Qualität und Marktlage. <strong>Keine Verpflichtung!</strong></p>
+      <p>⚖️ <strong>Gewicht ohne Anleitungen:</strong> Kilopreise gelten nur für Steine – Bauanleitungen bitte vorher entnehmen.</p>
+      <p>🌿 <strong>Kein LEGO® Botanic:</strong> Botanic-Sets nehmen wir derzeit nicht an.</p>
+    </div>
   </div>
 </section>
 
@@ -474,13 +484,26 @@
         <div class="email-cta-icon" aria-hidden="true">✉️</div>
         <h3>Direkt loslegen</h3>
         <p>Öffnet dein E-Mail-Programm mit einer vorausgefüllten Vorlage – einfach Fotos anhängen und absenden.</p>
+
+        <label class="confirm-checkbox" for="lego-confirm">
+          <input type="checkbox" id="lego-confirm" />
+          <span>
+            Ich bestätige, dass es sich ausschließlich um <strong>originales LEGO®</strong> handelt
+            (kein Botanic, keine Imitationen) und ich die Anleitungen <strong>nicht</strong> mit einwiege.
+          </span>
+        </label>
+
         <a
-          href="mailto:info@brickback.de?subject=LEGO%20Ankauf%20Anfrage&body=Hallo%20BrickBack-Team%2C%0A%0Aich%20m%C3%B6chte%20mein%20LEGO%C2%AE%20verkaufen%20und%20h%C3%A4tte%20gerne%20ein%20Angebot.%0A%0A---%20Meine%20Angaben%20---%0A%0ABeschreibung%20(Sets%2C%20lose%20Steine%2C%20gemischt%20...%3F)%3A%0A%0AZustand%3A%0A%0AGeschätztes%20Gewicht%20(optional)%3A%0A%0A---%0A(Bitte%201%E2%80%933%20Fotos%20anh%C3%A4ngen)%0A%0AViele%20Gr%C3%BC%C3%9Fe"
-          class="btn btn-primary btn-large"
-          style="width:100%; justify-content:center; margin-top:.5rem;"
+          id="email-btn"
+          href="mailto:info@brickback.de?subject=LEGO%20Ankauf%20Anfrage&body=Hallo%20BrickBack-Team%2C%0A%0Aich%20m%C3%B6chte%20mein%20LEGO%C2%AE%20verkaufen%20und%20h%C3%A4tte%20gerne%20ein%20Angebot.%0A%0A---%20Meine%20Angaben%20---%0A%0ABeschreibung%20(Sets%2C%20lose%20Steine%2C%20gemischt%20...%3F)%3A%0A%0AZustand%3A%0A%0AGeschaetztes%20Gewicht%20in%20kg%20(nur%20Steine%2C%20ohne%20Anleitungen)%3A%0A%0A---%0A(Bitte%201%E2%80%933%20Fotos%20anh%C3%A4ngen)%0A%0AViele%20Gr%C3%BC%C3%9Fe"
+          class="btn btn-primary btn-large email-btn-disabled"
+          style="width:100%; justify-content:center; margin-top:1rem;"
+          aria-disabled="true"
+          tabindex="-1"
         >
           E-Mail schreiben
         </a>
+
         <div class="email-address-display">
           oder direkt an: <strong>info@brickback.de</strong>
         </div>

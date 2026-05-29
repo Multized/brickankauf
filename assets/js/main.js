@@ -49,6 +49,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+  /* ----- LEGO Confirm Checkbox → Enable Email Button ----- */
+  const checkbox = document.getElementById('lego-confirm');
+  const emailBtn = document.getElementById('email-btn');
+  if (checkbox && emailBtn) {
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        emailBtn.classList.remove('email-btn-disabled');
+        emailBtn.removeAttribute('aria-disabled');
+        emailBtn.removeAttribute('tabindex');
+      } else {
+        emailBtn.classList.add('email-btn-disabled');
+        emailBtn.setAttribute('aria-disabled', 'true');
+        emailBtn.setAttribute('tabindex', '-1');
+      }
+    });
+  }
+
   /* ----- Smooth scroll for anchor links ----- */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {

@@ -583,6 +583,60 @@ a:hover { color: var(--red-dark); }
   font-weight: 500;
 }
 
+/* Confirm checkbox */
+.confirm-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  background: var(--gray-100);
+  border: 1.5px solid var(--gray-300);
+  border-radius: var(--radius);
+  padding: .9rem 1rem;
+  cursor: pointer;
+  text-align: left;
+  margin-top: .75rem;
+  transition: border-color var(--transition), background var(--transition);
+}
+.confirm-checkbox:has(input:checked) {
+  border-color: #16A34A;
+  background: #F0FDF4;
+}
+.confirm-checkbox input[type=checkbox] {
+  width: 18px; height: 18px;
+  flex-shrink: 0;
+  margin-top: .1rem;
+  accent-color: #16A34A;
+  cursor: pointer;
+}
+.confirm-checkbox span {
+  font-size: .875rem;
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+
+/* Disabled email button */
+.email-btn-disabled {
+  opacity: .4;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Pricing disclaimers */
+.pricing-disclaimers {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-top: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pricing-disclaimers p {
+  font-size: .9rem;
+  color: var(--gray-500);
+  text-align: center;
+}
+
 @media (max-width: 640px) {
   .contact-email-layout { grid-template-columns: 1fr; }
 }
