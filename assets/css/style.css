@@ -430,6 +430,7 @@ a:hover { color: var(--red-dark); }
   flex-shrink: 0;
 }
 .price-table-row--highlight .price-row-value { color: var(--red); }
+.price-row-value--anfrage { color: var(--red); font-style: italic; }
 
 /* ----- Why us ----- */
 .why-grid {
