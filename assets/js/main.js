@@ -1,5 +1,5 @@
 /* =====================================================
-   BrickAnkauf.de — Haupt-JavaScript
+   BrickBack.de — Haupt-JavaScript
    ===================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {

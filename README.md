@@ -1,4 +1,4 @@
-# BrickAnkauf.de
+# BrickBack.de
 
 Website für den Ankauf von originalem LEGO®. Statische HTML/CSS/JS-Seite, gehostet auf Cloudflare Pages.
 
@@ -25,7 +25,7 @@ Folgende Platzhalter in allen HTML-Dateien ersetzen:
 
 ### 3. Domain & Cloudflare Pages
 
-1. Domain `brickankauf.de` bei einem Registrar registrieren
+1. Domain `brickback.de` bei einem Registrar registrieren
 2. DNS auf Cloudflare übertragen (oder direkt bei Cloudflare registrieren)
 3. GitHub Repository erstellen und dieses Verzeichnis pushen
 4. In Cloudflare Pages: **Create a project** → **Connect to Git** → Repo auswählen
@@ -38,7 +38,7 @@ Folgende Platzhalter in allen HTML-Dateien ersetzen:
 ### 4. Sitemap & Search Console
 
 1. Google Search Console: Domain verifizieren
-2. Sitemap einreichen: `https://www.brickankauf.de/sitemap.xml`
+2. Sitemap einreichen: `https://www.brickback.de/sitemap.xml`
 
 ### 5. Preise aktualisieren
 
